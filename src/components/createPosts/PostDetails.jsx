@@ -164,7 +164,7 @@ export default function PostDetails() {
                   !postDetails?.image ? defaultAvatar : `${postDetails.image}`
                 }
                 alt={postDetails?.caption}
-                className="w-full post-image"
+                className="w-full post-image !rounded-none"
               />
             </div>
 
