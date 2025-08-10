@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import PhotoBoothLogo from "../assets/logo-2.svg";
+import SnapSphereLogo from "../assets/SnapSphereLogo.svg";
 import RegisterForm from "../components/auth/RegisterForm";
 
 export default function RegisterPage() {
@@ -7,7 +7,7 @@ export default function RegisterPage() {
     <div className="min-h-screen flex flex-col justify-center py-8 sm:px-6 lg:px-8">
       <div className="signup-container">
         <div className="flex justify-center mb-4">
-          <img src={PhotoBoothLogo} alt="PhotoBooth" className="h-[51px]" />
+          <img src={SnapSphereLogo} alt="SnapSphereLogo" className="h-[51px]" />
         </div>
         <RegisterForm />
         <div className="bg-white p-6 border border-gray-300 text-center mb-4 rounded-md">

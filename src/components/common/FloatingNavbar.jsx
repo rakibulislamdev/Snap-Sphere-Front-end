@@ -1,6 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import photoBoothLogo from "../../assets/logo-2.svg";
+import SnapSphereLogo from "../../assets/SnapSphereLogo.svg";
 import { CreatePost, Home, Notifications, Profile } from "../../utils/svg";
 import Logout from "../auth/Logout";
 import { useAuth } from "../../hooks/useAuth";
@@ -104,11 +104,11 @@ export default function FloatingNavbar() {
         className="flex gap-2 items-center font-medium py-4 mb-8 hover:opacity-80 transition-opacity"
       >
         <img
-          src={photoBoothLogo}
-          alt="PhotoBooth"
-          className="h-6 object-contain"
+          src={SnapSphereLogo}
+          alt="SnapSphereLogo"
+          className="h-8 w-8 object-contain"
         />
-        <h2 className="text-lg">Photo Booth</h2>
+        <h2 className="text-lg">Snap Sphere</h2>
       </Link>
 
       <nav>

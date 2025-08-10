@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"; // react-router-dom এ পরিবর্তন
-import PhotoBoothLogo from "../assets/logo.svg";
+import SnapSphereLogo from "../assets/SnapSphereLogo.svg";
 import LoginForm from "../components/auth/LoginForm";
 
 export default function LoginPage() {
@@ -7,7 +7,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="login-container rounded-md">
         <div className="flex justify-center mb-8">
-          <img src={PhotoBoothLogo} alt="PhotoBooth" className="h-[51px]" />
+          <img src={SnapSphereLogo} alt="SnapSphereLogo" className="h-[51px]" />
         </div>
 
         <div className="bg-white p-6 border border-gray-300 mb-3 rounded-md">
