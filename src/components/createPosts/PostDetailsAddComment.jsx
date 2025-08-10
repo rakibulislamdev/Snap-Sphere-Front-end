@@ -77,12 +77,8 @@ export default function PostDetailsAddComment({
   };
 
   return (
-    <form
-      onSubmit={handleCommentSubmit}
-      className="p-3 flex items-center border-t"
-    >
-      {/* User Avatar */}
-      <div className="w-8 h-8 rounded-full overflow-hidden bg-gray-300 mr-2">
+    <form onSubmit={handleCommentSubmit} className="p-3 flex items-start">
+      <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-300 mr-3 flex-shrink-0">
         <img
           src={!auth?.user?.avatar ? defaultAvatar : `${auth?.user?.avatar}`}
           alt={auth?.user?.name}
@@ -90,9 +86,8 @@ export default function PostDetailsAddComment({
         />
       </div>
 
-      {/* Comment Input */}
-      <div className="flex-1 flex items-center space-x-2">
-        <Field className="flex-1">
+      <div className="flex-1">
+        <Field className="w-full">
           <textarea
             disabled={isLoading}
             onChange={(e) => setComment(e.target.value)}
@@ -102,27 +97,10 @@ export default function PostDetailsAddComment({
             id="comment"
             rows={1}
             placeholder="Add a comment..."
-            className="text-sm w-full outline-none resize-none overflow-hidden"
-            style={{ height: "auto", minHeight: "20px" }}
+            className="w-full p-2 text-sm outline-none resize-none overflow-hidden rounded-md"
+            style={{ minHeight: "40px" }}
           />
         </Field>
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          disabled={isLoading || !comment.trim()}
-          className={`
-            text-sm font-semibold 
-            ${comment.trim() ? "text-blue-500" : "text-blue-300"}
-            ${
-              isLoading
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:text-blue-600"
-            }
-          `}
-        >
-          {onEditComment ? "Update" : "Post"}
-        </button>
       </div>
     </form>
   );
