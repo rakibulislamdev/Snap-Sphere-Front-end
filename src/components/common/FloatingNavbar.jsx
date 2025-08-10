@@ -143,7 +143,7 @@ export default function FloatingNavbar() {
       </nav>
 
       {user && (
-        <div className="flex justify-between items-center mt-4 pt-4 border-t">
+        <div className="flex justify-between items-center mt-4 pt-4">
           <Link
             to={`/profile/${user._id}`}
             className="flex items-center hover:bg-gray-100 p-2 rounded-lg transition-colors"
