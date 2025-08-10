@@ -19,19 +19,16 @@ export default function EditProfile() {
     formState: { errors },
   } = useForm();
 
-  // ইনিশিয়াল ভ্যালু সেট করুন
   useEffect(() => {
     if (auth?.user) {
       setValue("bio", auth.user.bio || "");
       setValue("website", auth.user.website || "");
       setValue("gender", auth.user.gender || "");
-      console.log("Initial user data:", auth.user); // ডিবাগিংয়ের জন্য
     }
   }, [auth?.user, setValue]);
 
   const bio = watch("bio") || "";
 
-  // এখানে ফর্ম সাবমিট হ্যান্ডলার এ ডিবাগিং যোগ করুন
   const onSubmit = (data) => {
     console.log("Form submitted with data:", data);
     handleProfile(data, reset);

@@ -53,7 +53,7 @@ const useAxios = () => {
               ...prev,
               accessToken,
               refreshToken: newRefreshToken || refreshToken,
-              user: prev?.user, // user অবজেক্টটিকে অক্ষুণ্ন রাখা হয়েছে
+              user: prev?.user,
             }));
 
             originalRequest.headers.Authorization = `Bearer ${accessToken}`;

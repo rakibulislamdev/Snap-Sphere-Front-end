@@ -18,13 +18,10 @@ export default function useEditProfile() {
 
   const handleProfile = async (data) => {
     try {
-      // accessToken ব্যবহার করুন, token নয়
       if (!auth?.accessToken) {
         toast.error("You are not logged in. Please log in and try again.");
         return;
       }
-
-      console.log("Using access token:", auth.accessToken); // ডিবাগিংয়ের জন্য
 
       const profileResponse = await fetch(`${baseURL}/users/me`, {
         method: "PATCH",
@@ -47,16 +44,13 @@ export default function useEditProfile() {
 
       const updatedUser = await profileResponse.json();
 
-      // লোকাল স্টোরেজে আপডেট করুন
       localStorage.setItem("user", JSON.stringify(updatedUser));
 
-      // auth কনটেক্সট আপডেট করুন
       setAuth({
         ...auth,
         user: updatedUser,
       });
 
-      // Avatar আপডেট করুন যদি পরিবর্তন হয়
       if (avatarFile) {
         const formData = new FormData();
         formData.append("avatar", avatarFile);
@@ -76,7 +70,6 @@ export default function useEditProfile() {
 
         const avatarData = await avatarResponse.json();
 
-        // আপডেট করা ডেটা সংরক্ষণ করুন
         localStorage.setItem("user", JSON.stringify(avatarData.user));
         setAuth({
           ...auth,

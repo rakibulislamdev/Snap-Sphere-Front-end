@@ -1,14 +1,10 @@
-# 📸 Photo Booth - React Social Media Platform
+# SnapSphere - React Social Media Platform
 
-**Photo Booth** একটি সম্পূর্ণ ফিচারযুক্ত সোশ্যাল মিডিয়া অ্যাপ্লিকেশন, যা **React.js** দিয়ে তৈরি করা হয়েছে।
+**Snap Sphere** is a fully-featured social media application built with **React.js**
 
 ## 🔗 Live Site
 
-👉 [Visit Live Site](https://photo-booth-three-omega.vercel.app/)
-
-## All APIs used in this project are pre-built and documented:
-
-👉 [Photo Booth API Documentation](https://documenter.getpostman.com/view/9649334/2sB2x5FsPY)
+👉 [Visit Live Site](https://snap-sphere-front-end.vercel.app/)
 
 ---
 

@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import useAxios from "../../hooks/useAxios";
-import { Link, useNavigate, useParams } from "react-router-dom"; // react-router-dom এ পরিবর্তন
+import { Link, useNavigate, useParams } from "react-router-dom";
 import defaultAvatar from "../../assets/defaultAvatar.png";
 import PostDetailsAddComment from "./PostDetailsAddComment";
 import {
