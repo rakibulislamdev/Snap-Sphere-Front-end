@@ -182,7 +182,7 @@ export default function HomePage() {
     },
   });
 
-  if (isLoading) {
+  if (auth?.accessToken && isLoading) {
     return (
       <div className="space-y-6 mt-10">
         {[...Array(2)].map((idx) => (
